@@ -16,10 +16,8 @@ VERSE
   end
 
   def verses(x, y)
-    demVerses = (y..x).map do |i|
-      verse i
-    end
-    demVerses.reverse.join("\n")
+    (y..x).map { |i| verse i }
+      .reverse.join("\n")
   end
 
   def song
